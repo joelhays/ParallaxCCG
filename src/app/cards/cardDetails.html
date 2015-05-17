@@ -1,0 +1,85 @@
+<h1 class="page-header">
+Card Details 
+<a class="btn btn-primary" href="#/cards"><i class="glyphicon glyphicon-chevron-left"></i> Return</a>
+
+<button class="pull-right btn btn-danger" ng-click="vm.deleteActiveCard()">Delete</button>
+<button ng-click="vm.revertActiveCardEdits()" ng-if="editForm.$dirty" class="pull-right btn btn-warning">Revert</button>
+<button ng-click="vm.confirmActiveCardEdits()" ng-if="editForm.$dirty" class="pull-right btn btn-success">Save</button>
+
+</h1>
+
+<div class="row">
+  <div class="col-md-6 col-lg-4">
+    <!-- use ng-repeat to scope the active card as "card" to bind the partial -->
+    <div ng-repeat="card in [vm.activeCard()]" ng-include="'./app/cards/_cardPreview.html'"></div>
+  </div>
+  <div class="col-md-6 col-lg-7 col-lg-offset-1">
+    <form action="" class="form" name="editForm">
+      <div class="form-group col-xs-5">
+        <label for="">Faction</label>
+        <select class="form-control" ng-model="vm.activeCard().factionId" ng-options="o.id as o.name for o in vm.data.factions"></select>
+      </div>
+      
+      <div class="form-group col-xs-4">
+        <label for="">Rarity</label>
+        <select class="form-control"  ng-model="vm.activeCard().rarityId" ng-options="o.id as o.name for o in vm.data.rarities"></select>
+      </div>
+      
+      <div class="form-group col-xs-3">
+        <label for="">Set</label>
+        <select class="form-control" ng-model="vm.activeCard().setId" ng-options="o.id as o.name for o in vm.data.sets"></select>
+      </div>
+      <div class="clearfix"></div>
+
+      <div class="form-group col-xs-3">
+        <label for="">Cost</label>
+        <input name="cost" type="text" class="form-control" ng-model="vm.activeCard().cost">
+      </div>
+      <div class="form-group col-xs-6">
+        <label for="">Name</label>
+        <input type="text" class="form-control" ng-model="vm.activeCard().name">
+      </div>
+      <div class="form-group col-xs-3">
+        <label for="">Type</label>
+        <select class="form-control" ng-model="vm.activeCard().typeId" ng-options="o.id as o.name for o in vm.data.types"></select>
+      </div>
+
+      <div class="clearfix"></div>
+      
+      <div class="form-group col-xs-12">
+        <label for="">Image URL <a target="_blank" class="btn btn-sm btn-primary" href='http://www.bing.com/images/search?q=sci+fi+art&qft=+filterui:aspect-tall'>find images</a></label>
+        <input type="text" class="form-control" ng-model="vm.activeCard()._artImageUrl">
+      </div>
+     
+      <div class="clearfix"></div>
+
+
+      <div class="form-group col-xs-12" ng-class="{ 'col-xs-9': vm.activeCard().hasStats() }">
+        <label for="">Rules Text</label>
+        <textarea rows="9" class="form-control" ng-model="vm.activeCard().text"></textarea>
+        Add: <br/>
+        <div fit-text class='stat stat-cost' ng-click="vm.insertText('{0}')"></div>
+        <div fit-text class='stat stat-speed' ng-click="vm.insertText('{s:0}')"></div>
+        <div fit-text class='stat stat-power' ng-click="vm.insertText('{p:0}')"></div>
+        <div fit-text class='stat stat-defense' ng-click="vm.insertText('{d:0}')"></div>
+      </div>
+
+      <div ng-if="vm.activeCard().hasStats()">
+        <div class="form-group col-xs-3">
+          <label for="">Speed</label>
+          <input type="text" class="form-control" ng-model="vm.activeCard().speed">
+        </div>
+        <div class="form-group col-xs-3">
+          <label for="">Power</label>
+          <input type="text" class="form-control" ng-model="vm.activeCard().power">
+        </div>
+        <div class="form-group col-xs-3">
+          <label for="">Defense</label>
+          <input type="text" class="form-control" ng-model="vm.activeCard().defense">
+        </div>
+      </div>
+      
+      <div class="clearfix"></div>      
+    </form>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<h1 class="page-header">
+  Factions
+</h1>
+
+<div class="row">
+  <div ng-repeat="faction in vm.factions">
+    <div class="col-sm-12 col-md-6">
+      <h3>{{faction.name}}</h4>
+      <p class="font-smaller">{{faction.description}}</p>
+    </div>
+    <div class="clearfix" ng-if="($index+1) % 2 === 0"></div>
+  </div>
+</div>

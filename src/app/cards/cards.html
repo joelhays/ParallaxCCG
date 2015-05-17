@@ -1,0 +1,106 @@
+<h1 class="page-header">
+  Cards 
+  <button class="btn btn-primary" ng-if="vm.data.sets.length > 0" ng-click="vm.newCard()">New</button>
+</h1>
+
+<div class="row">
+  <div class="form-inline">
+   <div class="form-group">
+      <label>Faction:</label>
+      <select class="form-control" ng-model="vm.state.filters.factionId">
+        <option value="">All</option>
+        <option ng-repeat="faction in vm.data.factions" value="{{faction.id}}" ng-selected="{{faction.id === vm.state.filters.factionId}}">{{faction.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Rarity:</label>
+      <select class="form-control" ng-model="vm.state.filters.rarityId">
+        <option value="">All</option>
+        <option ng-repeat="rarity in vm.data.rarities" value="{{rarity.id}}" ng-selected="{{rarity.id === vm.state.filters.rarityId}}">{{rarity.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Set:</label>
+      <select class="form-control" ng-model="vm.state.filters.setId">
+        <option value="">All</option>
+        <option ng-repeat="set in vm.data.sets" value="{{set.id}}" ng-selected="{{set.id == vm.state.filters.setId}}">{{set.name}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label>Type:</label>
+      <select class="form-control" ng-model="vm.state.filters.typeId">
+        <option value="">All</option>
+        <option ng-repeat="type in vm.data.types" value="{{type.id}}" ng-selected="{{type.id == vm.state.filters.typeId}}">{{type.name}}</option>
+      </select>
+    </div>
+    
+    <div class="clearfix"></div>
+    <br/>
+    
+    <div class="form-group">
+      <label>Cost:</label>
+      <input class="form-control" type="text" ng-model="vm.state.filters.cost" style="width:50px" />
+    </div>
+    <div class="form-group">
+      <label>Name:</label>
+      <input class="form-control" type="text" ng-model="vm.state.filters.name" />
+    </div>
+    <div class="form-group">
+      <label>Text:</label>
+      <input class="form-control" type="text" ng-model="vm.state.filters.text" />
+    </div>
+    
+    <div class="clearfix"></div>
+    <br/>
+  </div>
+
+  
+
+  <div class="col-xs-12">
+    <p ng-if="vm.data.sets.length === 0">
+      You don't have any sets! You must create a new set before you can create any cards.
+    </p>
+    <p ng-if="vm.data.sets.length > 0 && vm.data.cards.length === 0">
+      There are no cards. Create some!
+    </p>
+    <p ng-if="vm.data.cards.length > 0 && vm.filteredCards.length === 0">
+      There are no cards matching this criteria.
+    </p>
+  </div>
+
+  <div class="col-md-6 card-list-item" ng-repeat="card in (vm.filteredCards = (vm.data.cards | filter: vm.searchFilter)) | orderBy:'name' | filter: vm.pageFilter">
+    <a ng-href='#/cards/details/{{card.id}}'>
+      <div class="pull-left scale-card-preview" ng-include="'./app/cards/_cardPreview.html'">
+      </div>
+      <div class="card-info" style="">
+        <h3>{{card.name}} <div fit-text class="card-cost"><small>{{card.cost}}</small></div></h4>
+        <h4>
+          <b>{{card.type().name}}</b>
+          <small ng-if="card.hasStats()">{{card.speed}}/{{card.power}}/{{card.defense}}</small>
+        </h5>
+        <p>{{card.text}}</p>
+      </div>
+      <div class="clearfix"></div>
+    </a>
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  <nav class="text-center" ng-if="vm.numFilteredPages() > 0">
+    <ul class="pagination">
+      <li ng-class="{ disabled: vm.state.paging.currentPage === 0 }">
+        <a href="" aria-label="Previous" ng-click="vm.state.paging.currentPage=vm.state.paging.currentPage-1">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li ng-repeat="idx in range(vm.numFilteredPages())" ng-class="{ active: $parent.vm.state.paging.currentPage === idx }">
+        <a href="" ng-click="$parent.vm.state.paging.currentPage=idx">{{idx+1}}</a>
+      </li>
+      <li ng-class="{ disabled: vm.state.paging.currentPage === vm.numFilteredPages() - 1 }">
+        <a href="" aria-label="Next" ng-click="vm.state.paging.currentPage=vm.state.paging.currentPage+1">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,413 @@
+/*derived*/
+/* line 8, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.btn-primary {
+  background-color: rgba(53, 126, 189, 0.5); }
+  /* line 3, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: rgba(42, 100, 150, 0.5); }
+
+/* line 12, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.btn-danger {
+  background-color: rgba(217, 83, 79, 0.5); }
+  /* line 3, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+  .btn-danger:hover, .btn-danger:focus {
+    background-color: rgba(201, 48, 44, 0.5); }
+
+/* line 16, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.btn-success {
+  background-color: rgba(92, 184, 92, 0.5); }
+  /* line 3, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+  .btn-success:hover, .btn-success:focus {
+    background-color: rgba(68, 157, 68, 0.5); }
+
+/* line 20, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.btn-warning {
+  background-color: rgba(240, 173, 78, 0.5); }
+  /* line 3, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+  .btn-warning:hover, .btn-warning:focus {
+    background-color: rgba(236, 151, 31, 0.5); }
+
+/* line 24, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.form-control {
+  background-color: rgba(53, 126, 189, 0.5);
+  color: #f2f2f2;
+  border-color: #357ebd; }
+  /* line 29, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+  .form-control option {
+    background-color: #000000; }
+
+/* line 34, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.navbar {
+  background-color: transparent;
+  border-color: transparent; }
+
+/* line 42, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.pagination > li > a, .pagination > li > span, .pagination > li > a:hover, .pagination > li > a:focus {
+  background-color: rgba(42, 100, 150, 0.5);
+  color: #f2f2f2;
+  border-color: #357ebd; }
+/* line 50, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.pagination > li.active > a, .pagination > li.active > a:hover, .pagination > li.active > a:focus, .pagination > li.active > span, .pagination > li.active > span:hover, .pagination > li.active > span:focus {
+  background-color: rgba(86, 151, 208, 0.5);
+  color: #f2f2f2;
+  border-color: #357ebd; }
+/* line 59, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+.pagination > li.disabled > a, .pagination > li.disabled > a:hover, .pagination > li.disabled > a:focus, .pagination > li.disabled > span, .pagination > li.disabled > span:hover, .pagination > li.disabled > span:focus {
+  background-color: rgba(42, 100, 150, 0.5);
+  color: #f2f2f2;
+  border-color: #357ebd; }
+
+@media (max-width: 768px) {
+  /* line 71, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/overrideBootstrap */
+  .navbar {
+    background-color: black; }
+ }
+
+@font-face {
+  font-family: BatmanForever;
+  src: url(../fonts/batmfa_.woff); }
+
+/* line 5, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+html {
+  height: 100%; }
+
+/* line 8, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+body {
+  background-color: #000000;
+  background-image: url(../images/Space.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: 50px;
+  color: #f2f2f2;
+  font-family: "Open-sans", serif;
+  font-size: 16px; }
+
+/* line 18, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.sidebar {
+  transform: perspective(1000px) rotateY(30deg);
+  position: fixed;
+  top: 50px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 50px 20px;
+  overflow-x: hidden;
+  overflow-y: auto; }
+  /* line 29, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .sidebar .nav-sidebar {
+    margin: 0 -20px 20px; }
+    /* line 31, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .sidebar .nav-sidebar > li {
+      background-color: rgba(53, 126, 189, 0.5);
+      margin-bottom: 5px; }
+      /* line 34, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+      .sidebar .nav-sidebar > li > a {
+        color: #f2f2f2; }
+      /* line 38, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+      .sidebar .nav-sidebar > li > a:hover, .sidebar .nav-sidebar > li > a:focus {
+        color: black; }
+    /* line 42, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .sidebar .nav-sidebar > li.indent {
+      margin-left: 15px; }
+    /* line 47, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .sidebar .nav-sidebar > .active > a, .sidebar .nav-sidebar > .active > a:hover, .sidebar .nav-sidebar > .active > a:focus {
+      color: #f2f2f2;
+      background-color: #357ebd; }
+
+/* line 53, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.main {
+  padding: 20px; }
+  /* line 55, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .main .page-header {
+    margin-top: 0; }
+    /* line 57, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .main .page-header .btn {
+      margin-left: 20px; }
+
+/* line 63, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.set-list-item {
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 150px; }
+  /* line 67, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .set-list-item a {
+    color: #f2f2f2;
+    text-decoration: none; }
+  /* line 71, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .set-list-item p {
+    font-size: smaller; }
+  /* line 74, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .set-list-item img {
+    margin-top: 10px;
+    width: 95px;
+    height: 95px; }
+
+/* line 81, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.card-list-item {
+  margin-bottom: 20px;
+  overflow: hidden; }
+  /* line 85, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-list-item a {
+    color: inherit; }
+  /* line 87, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-list-item .scale-card-preview {
+    width: 120px;
+    height: 168px;
+    transform-origin: top left;
+    transform: scale(0.3); }
+  /* line 94, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-list-item .card-info {
+    position: absolute;
+    margin-left: 130px; }
+    /* line 98, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .card-list-item .card-info > p {
+      font-size: smaller; }
+    /* line 101, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .card-list-item .card-info > h3 {
+      margin-top: 0; }
+      /* line 103, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+      .card-list-item .card-info > h3 > .card-cost {
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        text-align: center;
+        background-image: url(../images/common/cost-small.png);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        padding-bottom: 4px; }
+        /* line 113, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+        .card-list-item .card-info > h3 > .card-cost small {
+          color: #f2f2f2;
+          margin: -4px 4px; }
+
+/* line 122, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.card-preview {
+  position: relative;
+  height: 560px;
+  width: 400px; }
+  /* line 126, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview img, .card-preview .name, .card-preview .type, .card-preview .text, .card-preview .cost, .card-preview .speed, .card-preview .power, .card-preview .defense {
+    position: absolute; }
+  /* line 129, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview img.setIcon {
+    width: 46px;
+    height: 46px;
+    bottom: 27px;
+    left: 16px; }
+  /* line 139, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .name, .card-preview .type, .card-preview .text, .card-preview .cost, .card-preview .speed, .card-preview .power, .card-preview .defense {
+    z-index: 1; }
+  /* line 142, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .name, .card-preview .type, .card-preview .cost, .card-preview .speed, .card-preview .power, .card-preview .defense {
+    font-family: BatmanForever; }
+  /* line 145, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .cost, .card-preview .speed, .card-preview .power, .card-preview .defense {
+    text-align: center;
+    color: black;
+    font-size: 30px; }
+  /* line 150, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .speed, .card-preview .power, .card-preview .defense {
+    width: 30px;
+    height: 42px;
+    right: 24px; }
+  /* line 155, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview img {
+    width: 400px;
+    height: 100%; }
+  /* line 159, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview div.name {
+    width: 220px;
+    height: 37px;
+    right: 20px;
+    top: 13px;
+    text-align: right;
+    font-size: 26px; }
+  /* line 167, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview div.type {
+    right: 20px;
+    top: 40px; }
+  /* line 171, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview div.text {
+    z-index: 1;
+    width: 230px;
+    top: 380px;
+    left: 90px; }
+  /* line 179, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .cost {
+    left: 25px;
+    width: 40px;
+    height: 60px;
+    top: 15px;
+    font-size: 42px; }
+  /* line 186, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .speed {
+    top: 382px; }
+  /* line 189, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .power {
+    top: 420px; }
+  /* line 192, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview .defense {
+    top: 458px; }
+  /* line 197, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview.Starship .stats-container {
+    position: absolute;
+    top: -382px;
+    left: 72px;
+    margin-top: 76px; }
+
+/* line 206, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.stat {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding-top: 2px;
+  margin-left: -4px;
+  margin-bottom: -10px; }
+  /* line 215, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .stat small {
+    color: #f2f2f2;
+    margin: -4px 4px;
+    padding-left: 2px;
+    padding-right: 2px; }
+  /* line 222, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .stat-cost {
+    background-image: url(../images/common/cost-small.png);
+    background-size: cover; }
+  /* line 226, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .stat-speed {
+    background-image: url(../images/common/speed.png);
+    background-size: cover;
+    margin-bottom: -9px; }
+    /* line 230, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .stat-speed small {
+      color: #555555; }
+    /* line 233, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .stat-speed small {
+      display: inline-block;
+      width: 100%;
+      margin-left: 1px; }
+  /* line 239, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .stat-power {
+    background-image: url(../images/common/power.png);
+    background-size: cover;
+    padding-top: 0px; }
+    /* line 243, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .stat-power small {
+      display: inline-block;
+      width: 100%;
+      margin-left: 1px; }
+  /* line 249, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .stat-defense {
+    background-image: url(../images/common/defense.png);
+    background-size: cover;
+    padding-top: 0px; }
+    /* line 253, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+    .stat-defense small {
+      display: inline-block;
+      width: 100%;
+      margin-left: 1px; }
+  /* line 259, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .stat-rotate {
+    background-image: url(../images/common/rotate.png);
+    background-size: cover; }
+
+/* line 265, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.font-smaller {
+  font-size: smaller; }
+
+/* line 270, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+h1 > small {
+  color: #f2f2f2; }
+
+/* line 270, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+h2 > small {
+  color: #f2f2f2; }
+
+/* line 270, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+h3 > small {
+  color: #f2f2f2; }
+
+/* line 270, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+h4 > small {
+  color: #f2f2f2; }
+
+/* line 270, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+h5 > small {
+  color: #f2f2f2; }
+
+/* line 270, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+h6 > small {
+  color: #f2f2f2; }
+
+@media (max-width: 768px) {
+  /* line 276, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .sidebar {
+    transform: none;
+    position: static;
+    width: 98%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0 auto; }
+ }
+
+@media (max-width: 480px) {
+  /* line 286, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .card-preview {
+    transform-origin: top left;
+    transform: scale(0.75);
+    margin-bottom: -140px; }
+ }
+
+/* line 300, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+form .form-control.ng-dirty {
+  border-bottom-width: 3px;
+  border-bottom-color: #5cb85c; }
+/* line 305, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+form.ng-pristine-add {
+  transition: 1ms linear all;
+  opacity: 0; }
+/* line 309, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+form.ng-pristine-add-active {
+  opacity: 1; }
+
+/* line 315, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%; }
+  /* line 320, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  .loading img {
+    position: absolute;
+    left: 50%;
+    margin-left: -93px;
+    top: 50%;
+    margin-top: -93px; }
+
+/* line 329, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+.spinme {
+  -webkit-animation: spin 4s infinite linear;
+  animation: spin 4s infinite linear; }
+
+@-webkit-keyframes spin {
+  /* line 335, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  /* line 336, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+@keyframes spin {
+  /* line 340, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  0% {
+    transform: rotate(0deg); }
+
+  /* line 341, C:/Users/jhays.DESCG/Desktop/Parallax/src/content/css/main */
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=site.css.map */

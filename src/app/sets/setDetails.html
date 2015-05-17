@@ -1,0 +1,41 @@
+<h1 class="page-header">
+Set Details 
+<a class="btn btn-primary" href="#/sets"><i class="glyphicon glyphicon-chevron-left"></i> Return</a>
+
+
+<button class="pull-right btn btn-danger" ng-click="vm.deleteActiveSet()">Delete</button>
+<button ng-click="vm.revertActiveSetEdits()" ng-if="editForm.$dirty" class="pull-right btn btn-warning">Revert</button>
+<button ng-click="vm.confirmActiveSetEdits()" ng-if="editForm.$dirty" class="pull-right btn btn-success">Save</button>
+</h1>
+
+<div class="row">
+  <div class="col-md-8">
+    <form action="" class="form" name="editForm">
+      <div class="form-group col-xs-12">
+        <label for="">Name</label>
+        <input type="text" class="form-control" ng-model="vm.activeSet().name">
+      </div>
+
+      <div class="clearfix"></div>
+      
+      <div class="form-group col-xs-12 col-sm-8">
+        <label for="">Image URL <a target="_blank" class="btn btn-sm btn-primary" href='http://www.bing.com/images/search?q=icon&qft=+filterui:aspect-square'>find images</a></label>
+        <input type="text" class="form-control" ng-model="vm.activeSet().iconUrl">
+      </div>
+       <div class="col-xs-12 col-sm-4">
+        <img ng-src="{{vm.activeSet().iconUrl}}" width="95"/>
+      </div>
+      
+      <div class="clearfix"></div>
+
+
+      <div class="form-group col-xs-12">
+        <label for="">Rules Text</label>
+        <textarea rows="9" class="form-control" ng-model="vm.activeSet().description"></textarea>
+      </div>
+      
+      
+      <div class="clearfix"></div>      
+    </form>
+  </div>
+</div>

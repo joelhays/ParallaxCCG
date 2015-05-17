@@ -1,0 +1,74 @@
+@mixin btn-bg($primary, $dark) {
+  background-color: rgba($primary, $primary-transparency);
+  &:hover, &:focus {
+    background-color: rgba($dark, $primary-transparency);
+  }
+}
+
+.btn-primary {
+  @include btn-bg($primary-color, $primary-color-dark);
+}
+
+.btn-danger {
+  @include btn-bg($danger-color, $danger-color-dark);
+}
+
+.btn-success {
+  @include btn-bg($success-color, $success-color-dark);
+}
+
+.btn-warning {
+  @include btn-bg($warning-color, $warning-color-dark);
+}
+
+.form-control {
+  background-color: rgba($primary-color, $primary-transparency);
+  color: $text-color;
+  border-color: $primary-color;
+  
+  option {
+    background-color: #000000;
+  }
+}
+
+.navbar {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.pagination {
+  & > li {
+    & > a, & > span,
+    & > a:hover, & > a:focus {
+      background-color: rgba($primary-color-dark, $primary-transparency);
+      color: $text-color;
+      border-color: $primary-color;
+    }
+    
+    &.active {
+      & > a, & > a:hover, & > a:focus, 
+      & > span, & > span:hover, & > span:focus {
+        background-color: rgba($primary-color-light, $primary-transparency);
+        color: $text-color;
+        border-color: $primary-color;
+      }
+    }
+    
+    &.disabled {
+      & > a, & > a:hover, & > a:focus, 
+      & > span, & > span:hover, & > span:focus {
+        background-color: rgba($primary-color-dark, $primary-transparency);
+        color: $text-color;
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 768px) {
+  .navbar {
+    background-color: black;
+  }
+}

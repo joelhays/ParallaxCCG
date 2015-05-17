@@ -1,0 +1,20 @@
+$text-color:darken(#ffffff, 5%);
+$primary-color:darken(#428bca,5%);
+$danger-color:#d9534f;
+$warning-color:#f0ad4e;
+$success-color:#5cb85c;
+$header-height:50px;
+$bg-color:#000000;
+$font-size:16px;
+$primary-transparency: .5;
+
+$card-preview-width:400px;
+$card-preview-height:560px;
+$small-card-preview-scale:0.30;
+
+/*derived*/
+$primary-color-dark:darken($primary-color, 10%);
+$danger-color-dark:darken($danger-color, 10%);
+$warning-color-dark:darken($warning-color, 10%);
+$success-color-dark:darken($success-color, 10%);
+$primary-color-light:lighten($primary-color, 10%);

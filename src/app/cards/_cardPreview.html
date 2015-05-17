@@ -1,0 +1,20 @@
+<div class="card-preview {{card.type().name}}">
+  <img ng-src="{{card.artUrl()}}" />
+  <img ng-src="{{card.frameUrl()}}" />
+  <img src="./content/images/common/cost.png" />
+  <img ng-if="card.hasStats()" ng-src="./content/images/common/stats-{{card.type().name}}.png" />
+  <img ng-src="{{card.rarityUrl()}}" />
+
+  <img class="setIcon" ng-src="{{card.set().iconUrl}}" />
+
+
+  <div class="cost" fit-text ng-model="vm.activeCard().cost">{{card.cost}}</div>
+  <div class="name" fit-text ng-model="vm.activeCard().name">{{card.name}}</div>
+  <div class="type">{{card.type().name}}</div>
+  <div class="text" compile-unsafe-html ng-bind-html="card.rulesText()"></div>
+  <div ng-if="card.hasStats()" class="stats-container">
+    <div class="speed" fit-text ng-model="card.speed">{{card.speed}}</div>
+    <div class="power" fit-text ng-model="card.power">{{card.power}}</div>
+    <div class="defense" fit-text ng-model="card.defense">{{card.defense}}</div>
+  </div>
+</div>

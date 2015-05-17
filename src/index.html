@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+  <title>Parallax CCG</title>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700,300,600,400' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/animate.css/animate.min.css">
+  <link rel="stylesheet" href="content/css/site.css">
+</head>
+
+<body ng-controller="root">
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#/">Parallax CCG</a>
+      </div>
+    </div>
+  </nav>
+  
+  <div class="container-fluid">
+    <div class="row text-center loading" ng-class="{ 'animated fadeOut': !isLoading }">
+     <img src="content/images/base.png">
+     <img src="content/images/spin.png" class="spinme">
+    </div>
+    <div class="row animated fadeIn" ng-if="!isLoading">
+      <div class="col-sm-3 col-md-2 sidebar" ng-controller="sidebar">
+        <ng-include src="'app/sidebar/sidebar.html'"></ng-include>
+      </div>
+      <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+        <div ng-view class="animate-view"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="vendor/jquery/dist/jquery.min.js"></script>
+  <script src="vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="vendor/angular/angular.min.js"></script>
+  <script src="vendor/angular-route/angular-route.min.js"></script>
+  <script src="vendor/angular-animate/angular-animate.min.js"></script>
+
+
+  <script src="vendor/chance/chance.js"></script>
+
+  <script src="app/app.js"></script>
+  <script src="app/sidebar/sidebarController.js"></script>
+
+  <script src="app/rootController.js"></script>
+  <script src="app/overview/overviewController.js"></script>
+  
+  <script src="app/cards/cardsController.js"></script>
+  <script src="app/cards/cardsService.js"></script>
+  
+  <script src="app/sets/setsController.js"></script>
+  <script src="app/sets/setsService.js"></script>  
+  
+  <script src="app/info/infoController.js"></script>
+  
+  <script src="app/common/fitTextDirective.js"></script>
+  <script src="app/common/preloaderService.js"></script>
+  <script src="app/common/compileDirective.js"></script>
+  
+  <script src="app/common/dataService.js"></script>
+  <script src="app/common/dataFactory.js"></script>
+
+</body>
+
+</html>

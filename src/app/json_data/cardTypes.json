@@ -1,0 +1,33 @@
+[
+  {
+    "id": "3f0e9e3a-244f-5a0b-8e5c-99b9ba7099e2",
+    "name": "Homeworld",
+    "description": "Homeworld's represent your declared faction and provides a certain amount of resources every turn. You may only play neutral cards, or cards loyal to your faction."
+  }, {
+    "id": "9be1d6b5-9eb2-5bb9-be13-82fa09c8109e",
+    "name": "Device",
+    "description": "Devices represent weapons, armor, and other objects. They may only be deployed during your Command phase and only if no other effects are waiting to resolve."
+  }, {
+    "id": "570ef33e-7ed6-5ca8-ab72-c9ac7de4b954",
+    "name": "Starship",
+    "description": "Starships represent your forces in space. Each Starship has a speed stat which indicates how fast they can react during a battle, a power stat which indicates how much damage the unit can deal, and a defense stat which indicates how much damage the unit can take before it is destroyed. Starships may only be deployed during your Command phase and only if no other effects are waiting to resolve.",
+    "hasStats": true
+  }, {
+    "id": "db7526ef-dd6e-5b5c-a445-22446cdf81f3",
+    "name": "Character",
+    "description": "Character represent your ground troops and personnel. Like Starships, Characters also have stats for speed, power, and defense that indicate their effectiveness in battle. Characters may only be deployed during your Command phase and only if no other effects are waiting to resolve.",
+    "hasStats": true
+  }, {
+    "id": "8e4e5a0d-49c5-57f2-abec-fd1b88075419",
+    "name": "Command",
+    "description": "Commands represent strategic planning. Commands may only be executed during your Command phase. Once the Command's effect resolves, it is placed into your discard pile. Commands may only be executed if no other effects are waiting to resolve."
+  }, {
+    "id": "8d56865c-133a-5320-a985-3f13105101f1",
+    "name": "Maneuver",
+    "description": "Manuevers represent quick decisions made during battle. Maneuvers can be executed at any time during your or your opponent's turn and in response to any action."
+  }, {
+    "id": "bc4a4ebc-1580-552f-ba94-a14b9fca3121",
+    "name": "Directive",
+    "description": "Directives may only be deployed during your Command phase. Once a Directive has resolved, it remains on the battlefield and its effect is activated. The Directive's effect is active as long as it is on the battlefield. Directives may only be deployed if no other effects are waiting to resolve."
+  }
+]

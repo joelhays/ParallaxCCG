@@ -1,0 +1,44 @@
+<h1 class="page-header">
+  Sets 
+  <button class="btn btn-primary" ng-click="vm.newSet()">New</button>
+</h1>
+
+<div class="row">
+  <div class="col-xs-12" ng-if="vm.data.sets.length === 0">
+    <p>
+      There are no card sets. Create some!
+    </p>
+  </div>
+  
+  <div class="col-md-6 set-list-item" ng-repeat="set in  (vm.filteredSets = (vm.data.sets | filter: vm.searchFilter)) | orderBy:'name' | filter: vm.pageFilter">
+    <a ng-href='#/sets/details/{{set.id}}'>
+      <div class="pull-left">
+        <img ng-src="{{set.iconUrl}}" width="95" />
+      </div>
+      <div class="col-xs-8">
+        <h3>{{set.name}}</h4>
+        <p>{{set.description}}</p>
+      </div>
+    </a>
+  </div>
+  
+  <div class="clearfix"></div>
+  
+  <nav class="text-center" ng-if="vm.numFilteredPages() > 0">
+    <ul class="pagination">
+      <li ng-class="{ disabled: vm.state.paging.currentPage === 0 }">
+        <a href="" aria-label="Previous" ng-click="vm.state.paging.currentPage=vm.state.paging.currentPage-1">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li ng-repeat="idx in range(vm.numFilteredPages())" ng-class="{ active: $parent.vm.state.paging.currentPage === idx }">
+        <a href="" ng-click="$parent.vm.state.paging.currentPage=idx">{{idx+1}}</a>
+      </li>
+      <li ng-class="{ disabled: vm.state.paging.currentPage === vm.numFilteredPages() - 1 }">
+        <a href="" aria-label="Next" ng-click="vm.state.paging.currentPage=vm.state.paging.currentPage+1">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

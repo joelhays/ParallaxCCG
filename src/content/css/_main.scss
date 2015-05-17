@@ -1,0 +1,342 @@
+@font-face {
+  font-family: BatmanForever;
+  src: url(../fonts/batmfa_.woff);
+}
+html {
+  height: 100%;
+}
+body {
+  background-color: $bg-color;
+  background-image: url(../images/Space.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  padding-top: $header-height;
+  color: $text-color;
+  font-family: "Open-sans", serif;
+  font-size: $font-size;
+}
+.sidebar {
+  transform: perspective(1000px) rotateY(30deg);
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 50px 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .nav-sidebar {
+    margin: 0 -20px 20px;
+    & > li {
+      background-color: rgba($primary-color, $primary-transparency);
+      margin-bottom: 5px;
+      & > a {
+        color: $text-color;
+      }
+      & > a:hover,
+      & > a:focus {
+        color: black;
+      }
+    }
+    &> li.indent {
+      margin-left: 15px;
+    }
+    & > .active > a,
+    & > .active > a:hover,
+    & > .active > a:focus {
+      color: $text-color;
+      background-color: $primary-color;
+    }
+  }
+}
+.main {
+  padding: 20px;
+  .page-header {
+    margin-top: 0;
+    .btn {
+      margin-left: 20px;
+    }
+  }
+}
+
+.set-list-item {
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 150px;
+  a {
+    color: $text-color;
+    text-decoration: none;
+  }
+  p {
+    font-size: smaller;
+  }
+  img {
+    margin-top: 10px;
+    width: 95px;
+    height: 95px;
+  }
+}
+
+.card-list-item {
+  margin-bottom:20px;
+  overflow: hidden;
+  
+  a { color: inherit; }
+  
+  .scale-card-preview {
+    width: $card-preview-width * $small-card-preview-scale; 
+    height: $card-preview-height * $small-card-preview-scale;
+    transform-origin: top left; 
+    transform:scale($small-card-preview-scale);
+  }
+  
+  .card-info {
+    position:absolute; 
+    margin-left: $card-preview-width * $small-card-preview-scale + 10;
+    
+    & > p {
+      font-size: smaller;
+    }
+    & > h3 {
+      margin-top: 0;
+      & > .card-cost {
+        position: relative;
+        top: 6px;
+        display: inline-block;
+        text-align: center;
+        background-image: url(../images/common/cost-small.png);
+        background-size: cover;
+        width: 30px;
+        height: 30px;
+        padding-bottom: 4px;
+        small {
+          color: #f2f2f2;
+          margin: -4px 4px;
+        }
+      }
+    }
+  }
+}
+
+.card-preview {
+  position: relative;
+  height: $card-preview-height;
+  width: $card-preview-width;
+  img, .name, .type, .text, .cost, .speed, .power, .defense {
+    position: absolute;
+  }
+  img.setIcon {
+    width: 46px;
+    height: 46px;
+//    bottom: 77px;
+//    right: 16px;
+    
+    bottom: 27px;
+    left: 16px;
+  }
+  
+  .name,.type,.text,.cost,.speed,.power,.defense {
+    z-index: 1;
+  }
+  .name,.type,.cost,.speed,.power,.defense {
+    font-family: BatmanForever;
+  }
+  .cost,.speed,.power,.defense {
+    text-align: center;
+    color: black;
+    font-size: 30px;
+  }
+  .speed,.power,.defense {
+    width: 30px;
+    height: 42px;
+    right: 24px;
+  }
+  img {
+    width: $card-preview-width;
+    height: 100%;
+  }
+  div.name {
+    width: 220px;
+    height: 37px;
+    right: 20px;
+    top: 13px;
+    text-align: right;
+    font-size: 26px;
+  }
+  div.type {
+    right: 20px;
+    top: 40px;
+  }
+  div.text {
+    z-index: 1;
+    width: 230px;
+    top: 380px;
+    left: 90px;
+    
+    
+  }
+  .cost {
+    left: 25px;
+    width: 40px;
+    height: 60px;
+    top: 15px;
+    font-size: 42px;
+  }
+  .speed {
+    top: 382px;
+  }
+  .power {
+    top: 420px;
+  }
+  .defense {
+    top: 458px;
+  }
+
+  &.Starship {
+    .stats-container {
+      position: absolute;
+      top: -382px;
+      left: 72px;
+      margin-top: 76px;
+    }
+  }
+}
+
+.stat {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  padding-top: 2px;
+  margin-left: -4px;
+  margin-bottom: -10px;
+  small {
+    color: #f2f2f2;
+    margin: -4px 4px;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  &-cost {
+    background-image: url(../images/common/cost-small.png);
+    background-size: cover;
+  }
+  &-speed {
+    background-image: url(../images/common/speed.png);
+    background-size: cover;
+    margin-bottom: -9px;
+    small {
+      color: #555555;
+    }
+    small {
+      display: inline-block;
+      width: 100%;
+      margin-left: 1px;
+    }
+  }
+  &-power {
+    background-image: url(../images/common/power.png);
+    background-size: cover;
+    padding-top: 0px;
+    small {
+      display: inline-block;
+      width: 100%;
+      margin-left: 1px;
+    }
+  }
+  &-defense {
+    background-image: url(../images/common/defense.png);
+    background-size: cover;
+    padding-top: 0px;
+    small {
+      display: inline-block;
+      width: 100%;
+      margin-left: 1px;
+    }
+  }
+  &-rotate {
+    background-image: url(../images/common/rotate.png);
+    background-size: cover;
+  }
+}
+
+.font-smaller {
+  font-size: smaller;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} > small { 
+    color: $text-color;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    transform: none;
+    position: static;
+    width: 98%;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 480px) {
+  .card-preview {
+    transform-origin: top left;
+    transform: scale(.75);
+    margin-bottom: -140px;
+  }
+}
+
+ 
+//.animate-view.ng-leave {
+//  position: absolute;
+//  -webkit-animation: zoomOut 1.5s;
+//  animation: zoomOut 1.5s;
+//}
+form {
+  .form-control.ng-dirty {
+    border-bottom-width: 3px;
+    border-bottom-color: $success-color;
+  }
+  
+  &.ng-pristine-add {
+    transition:1ms linear all;
+    opacity:0;
+  }
+  &.ng-pristine-add-active {
+    opacity:1;
+  }
+}
+ 
+
+.loading {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  img {
+    position: absolute;
+    left: 50%;
+    margin-left: -93px;
+    top: 50%;
+    margin-top: -93px;
+  }
+}
+ 
+.spinme {
+    -webkit-animation: spin 4s infinite linear;
+    animation: spin 4s infinite linear;
+}
+
+@-webkit-keyframes spin {
+    0%  {-webkit-transform: rotate(0deg);}
+    100% {-webkit-transform: rotate(360deg);}   
+}
+
+@keyframes spin {
+    0%  {transform: rotate(0deg);}
+    100% {transform: rotate(360deg);}   
+}

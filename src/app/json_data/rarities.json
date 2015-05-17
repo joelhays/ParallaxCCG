@@ -1,0 +1,18 @@
+[
+  {
+    "id": "6cb64816-ec98-5ca7-8800-3c6ea5d57967",
+    "name": "Common",
+    "description": "Common description",
+    "image": "rarity-common.png"
+  }, {
+    "id": "a769430b-c6e8-5a80-aa88-4b73041327fa",
+    "name": "Uncommon",
+    "description": "Uncommon description",
+    "image": "rarity-uncommon.png"
+  }, {
+    "id": "3e025738-42a7-5ec8-a4f5-6a670e7ab88b",
+    "name": "Rare",
+    "description": "Rare description",
+    "image": "rarity-rare.png"
+  }
+]

@@ -1,0 +1,13 @@
+<h1 class="page-header">
+  Card Types
+</h1>
+
+<div class="row">
+  <div ng-repeat="type in vm.cardTypes">
+    <div class="col-sm-12 col-md-6">
+      <h3>{{type.name}}</h4>
+    <p class="font-smaller">{{type.description}}</p>
+  </div>
+  <div class="clearfix" ng-if="($index+1) % 2 === 0"></div>
+  </div>
+</div>

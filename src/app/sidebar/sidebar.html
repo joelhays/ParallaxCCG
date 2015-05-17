@@ -1,0 +1,18 @@
+<ul class="nav nav-sidebar">
+  <li ng-class="{ active: isActive('/') }"><a href="#/">Overview</a>
+  </li>
+</ul>
+<ul class="nav nav-sidebar">
+  <li ng-class="{ active: isActive('/sets') }"><a href="#/sets">Sets</a>
+  </li>
+  <li ng-if="pathContains('/sets/details/')" ng-class="{ active: pathContains('/sets/details/') }" class="indent"><a href="">Details</a></li>
+  <li ng-class="{ active: isActive('/cards') }"><a href="#/cards">Cards</a>
+  </li>
+  <li ng-if="pathContains('/cards/details/')" ng-class="{ active: pathContains('/cards/details/') }" class="indent"><a href="">Details</a></li>
+</ul>
+<ul class="nav nav-sidebar">
+  <li><a href="#/factions">Factions</a>
+  </li>
+  <li><a href="#/cardTypes">Card Types</a>
+  </li>
+</ul>
