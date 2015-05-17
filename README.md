@@ -1,7 +1,7 @@
 ParallaxCCG
 ================
 
-[Live Demo](www.joelhays.com/demos/parallax).
+[Live Demo](www.joelhays.com/demos/parallax)
 
 Parallax is an imaginary card game set in a sci-fi universe. All card designs are my own creation.
 
